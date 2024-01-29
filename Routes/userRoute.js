@@ -6,7 +6,7 @@ let router=express.Router();
 
 router.post("/addUser",user.addUser)
 router.post("/forgottenPass",user.forgottenPass)
-router.post("/checkPass/:name",hasher.authenticate,hasher.adminGuard,user.passwordReset)
+router.post("/checkPass",hasher.authenticate,hasher.adminGuard,user.passwordReset)
 
 export default router
 
